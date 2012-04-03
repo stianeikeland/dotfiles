@@ -10,10 +10,18 @@ SELECT="if [ \$? = 0 ]; then echo \"${SMILEY}\"; else echo \"${FROWNY}\"; fi"
 USERHOST='\[\e]0;\w\a\]\n\[\e[32m\]\u@\h'
 LOCATION='\[\e[33m\]\w\[\e[0m\]'
 
+smiley () {
+	if [ $? == 0 ]; then
+		echo $SMILEY
+	else
+		echo $FROWNY
+	fi
+}
+
 #PS1="${USERHOST}${NORMAL}:${LOCATION}${RED}\`__git_ps1\`${NORMAL} \`${SELECT}\`\n\$ "
 #PS1="┌─[\[\e[34m\]\h\[\e[0m\]][\[\e[32m\]\w\[\e[0m\]]\n└─╼ "
 GIT_PS1_SHOWDIRTYSTATE=1
-PS1="┌─[\[\e[34m\]\h\[\e[0m\]][\[\e[32m\]\w\[\e[0m\]]${YELLOW}\`__git_ps1\`${NORMAL} \`${SELECT}\`\n└─╼ "
+PS1="┌─[\[\e[34m\]\h\[\e[0m\]][\[\e[32m\]\w\[\e[0m\]]${YELLOW}\`__git_ps1\`${NORMAL} $(smiley)\n└─╼ "
 
 
 # Enable options:
