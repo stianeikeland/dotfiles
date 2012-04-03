@@ -1,5 +1,6 @@
 BLUE="\[\e[34m\]"
 RED="\[\033[31;1m\]"
+YELLOW='\e[0;33m'
 WHITE="\[\033[37;0m\]"
 GREEN="\[\033[32m\]"
 NORMAL="\[\033[0m\]"
@@ -11,7 +12,8 @@ LOCATION='\[\e[33m\]\w\[\e[0m\]'
 
 #PS1="${USERHOST}${NORMAL}:${LOCATION}${RED}\`__git_ps1\`${NORMAL} \`${SELECT}\`\n\$ "
 #PS1="┌─[\[\e[34m\]\h\[\e[0m\]][\[\e[32m\]\w\[\e[0m\]]\n└─╼ "
-PS1="┌─[\[\e[34m\]\h\[\e[0m\]][\[\e[32m\]\w\[\e[0m\]]\`__git_ps1\`${NORMAL} \`${SELECT}\`\n└─╼ "
+GIT_PS1_SHOWDIRTYSTATE=1
+PS1="┌─[\[\e[34m\]\h\[\e[0m\]][\[\e[32m\]\w\[\e[0m\]]${YELLOW}\`__git_ps1\`${NORMAL} \`${SELECT}\`\n└─╼ "
 
 
 # Enable options:
