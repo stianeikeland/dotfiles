@@ -41,16 +41,16 @@ export HISTFILESIZE=16384;
 export HISTCONTROL=ignoredups;
 
 
-export PATH="/usr/local/bin:$PATH:/opt/local/bin:~/bin:~/bin/ec2/bin:~/bin/gsutil:~/bin/dropbox:/usr/local/cuda/bin:/usr/local/sbin"
+export PATH="/usr/local/bin:$PATH:/opt/local/bin:~/bin:~/bin/ec2/bin:~/bin/gsutil:~/bin/synced:/usr/local/cuda/bin:/usr/local/sbin"
 
 export DYLD_LIBRARY_PATH=/usr/local/cuda/lib:$DYLD_LIBRARY_PATH
 
-if [ -f ~/Dropbox/dotfiles/bash/aliases.bash ]; then
-	. ~/Dropbox/dotfiles/bash/aliases.bash
+if [ -f ~/.bash.aliases ]; then
+	. ~/.bash.aliases
 fi
 
-if [ -f ~/Dropbox/dotfiles/bash/grc.bash ]; then
-	. ~/Dropbox/dotfiles/bash/grc.bash
+if [ -f ~/.bash.grc ]; then
+	. ~/.bash.grc
 fi
 
 if [ -f `brew --prefix`/etc/bash_completion ]; then
