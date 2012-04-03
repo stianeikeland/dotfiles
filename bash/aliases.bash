@@ -49,3 +49,9 @@ alias pubkey="more ~/.ssh/id_rsa.pub | pbcopy | echo '=> Public key copied to pa
 function digga() {
 	dig +nocmd "$1" any +multiline +noall +answer
 }
+
+# Open man page in preview
+function pman() { 
+	man -t "${1}" | open -f -a Preview
+}
+
