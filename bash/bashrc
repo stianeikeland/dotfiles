@@ -1,0 +1,95 @@
+export PS1="┌─[\[\e[34m\]\h\[\e[0m\]][\[\e[32m\]\w\[\e[0m\]]\n└─╼ "
+
+# Enable options:
+shopt -s cdspell
+shopt -s cdable_vars
+shopt -s checkhash
+shopt -s checkwinsize
+shopt -s sourcepath
+shopt -s no_empty_cmd_completion
+shopt -s cmdhist
+shopt -s histappend histreedit histverify
+shopt -s extglob        # Necessary for programmable completion.
+
+# Case-insensitive globbing.
+shopt -s nocaseglob;
+
+# Keep a reasonably long history.
+export HISTSIZE=4096;
+
+# Keep even more history lines inside the file, so we can still look up
+# previous commands without needlessly cluttering the current shell's history.
+export HISTFILESIZE=16384;
+ 
+# When executing the same command twice or more in a row, only store it once.
+export HISTCONTROL=ignoredups;
+
+alias ls="ls -hFG"
+
+# IP addresses
+alias ip="dig +short myip.opendns.com @resolver1.opendns.com"
+alias localip="ipconfig getifaddr en1"
+alias ips="ifconfig -a | perl -nle'/(\d+\.\d+\.\d+\.\d+)/ && print $1'"
+
+# Enhanced WHOIS lookups
+alias whois="whois -h whois-servers.net"
+
+# Flush Directory Service cache
+alias flushdns="dscacheutil -flushcache"
+
+# Trim new lines and copy to clipboard
+alias c="tr -d '\n' | pbcopy"
+
+# Pretty cool HTTP hack: (from @janmoesen)
+for method in GET HEAD POST PUT DELETE TRACE OPTIONS; do
+	alias "$method"="lwp-request -m '$method'"
+done
+
+# Show/hide hidden files in Finder
+alias showfinder="defaults write com.apple.Finder AppleShowAllFiles -bool true && killall Finder"
+alias hidefinder="defaults write com.apple.Finder AppleShowAllFiles -bool false && killall Finder"
+
+# Hide/show all desktop icons (useful when presenting)
+alias hidedesktop="defaults write com.apple.finder CreateDesktop -bool false && killall Finder"
+alias showdesktop="defaults write com.apple.finder CreateDesktop -bool true && killall Finder"
+
+alias nano='nano -w';
+
+# Enable aliases to be sudo’ed
+alias sudo='sudo '
+
+# Get OS X Software Updates, update Homebrew itself, and upgrade installed Homebrew packages
+alias update='sudo softwareupdate -i -a; brew update; brew upgrade'
+
+# View HTTP traffic
+alias sniffhttp="sudo ngrep -d 'en1' -t '^(GET|POST) ' 'tcp and port 80'"
+# View SIP traffic
+alias sniffsip="sudo ngrep -q -W byline -d 'en1' -t '' 'udp port 5060'"
+
+# Recursively delete `.DS_Store` files
+alias cleanup="find . -type f -name '*.DS_Store' -ls -delete"
+
+# All the dig info
+function digga() {
+	dig +nocmd "$1" any +multiline +noall +answer
+}
+
+
+
+export PATH="/usr/local/bin:$PATH:/opt/local/bin:~/bin:~/bin/ec2/bin:~/bin/gsutil:~/bin/dropbox:/usr/local/cuda/bin:/usr/local/sbin"
+
+export DYLD_LIBRARY_PATH=/usr/local/cuda/lib:$DYLD_LIBRARY_PATH
+
+source ~/Dropbox/dotfiles/bash/grc.bash
+source ~/Dropbox/dotfiles/bash/ssh.bash
+
+if [ -f `brew --prefix`/etc/bash_completion ]; then
+	. `brew --prefix`/etc/bash_completion
+fi
+
+export PYTHONPATH="/usr/local/lib/python2.7/site-packages:$PYTHONPATH"
+
+export EDITOR="mate -w"
+export SVN_EDITOR="mate -w"
+export GIT_EDITOR="mate -w"
+
