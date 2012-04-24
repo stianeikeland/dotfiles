@@ -53,8 +53,8 @@ defaults write com.apple.terminal StringEncodings -array 4
 defaults write com.apple.screensaver askForPassword -int 1
 defaults write com.apple.screensaver askForPasswordDelay -int 0
 
-# Empty Trash securely by default
-defaults write com.apple.finder EmptyTrashSecurely -bool true
+# Empty Trash securely by default (removed: too slow..)
+#defaults write com.apple.finder EmptyTrashSecurely -bool true
 
 # Disable the warning when changing a file extension
 defaults write com.apple.finder FXEnableExtensionChangeWarning -bool false
