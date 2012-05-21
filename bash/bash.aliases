@@ -45,6 +45,9 @@ alias cleanup="find . -type f -name '*.DS_Store' -ls -delete"
 
 alias pubkey="more ~/.ssh/id_rsa.pub | pbcopy | echo '=> Public key copied to pasteboard.'"
 
+# Simple python web server (in current directory)
+alias serveweb="python -m SimpleHTTPServer"
+
 # All the dig info
 function digga() {
 	dig +nocmd "$1" any +multiline +noall +answer
