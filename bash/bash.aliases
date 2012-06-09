@@ -82,3 +82,4 @@ function countdown() {
 	return 0;
 }
 
+alias stopwatch="echo \"Ctrl-D to stop..\" ; time read"
