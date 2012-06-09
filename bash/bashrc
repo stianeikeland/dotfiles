@@ -67,7 +67,8 @@ fi
 
 export PYTHONPATH="/usr/local/lib/python2.7/site-packages:$PYTHONPATH"
 
-export EDITOR="mate -w"
+# ln -s /usr/bin/mate mate_wait
+export EDITOR="mate_wait"
 export SVN_EDITOR="mate -w"
 export GIT_EDITOR="mate -w"
 
