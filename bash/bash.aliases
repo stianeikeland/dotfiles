@@ -58,3 +58,27 @@ function pman() {
 	man -t "${1}" | open -f -a Preview
 }
 
+# Countdown timer aka pizza-timer - requires gdate (gnu userland)
+function countdown() {
+	if ! [[ "$1" =~ ^[0-9]+$ ]] ; then
+		echo "Usage: countdown <time in minutes> [\"<message>\"]";
+		return 1;
+	fi;
+	
+	MIN=$1;
+	for ((i=MIN*60;i>=0;i--)); do
+		echo -ne "\r$(gdate -d"0+$i sec" +%H:%M:%S)";
+		sleep 1;
+	done;
+	
+	if [ -n "$2" ]; then
+		if command -v growlnotify $> /dev/null
+		then
+			growlnotify -w -p High -t "Countdown" -m "$2"
+		fi
+		say "$2";
+	fi;
+	
+	return 0;
+}
+
