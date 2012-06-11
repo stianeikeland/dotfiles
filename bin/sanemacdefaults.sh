@@ -77,6 +77,9 @@ defaults write com.apple.finder ShowStatusBar -bool true
 # Automatically hide and show the Dock
 defaults write com.apple.dock autohide -bool true
 
+# Bluetooth headset higher bitrate
+# defaults read com.apple.BluetoothAudioAgent
+defaults write com.apple.BluetoothAudioAgent "Apple Bitpool Min (editable)" 40
 
 
 
