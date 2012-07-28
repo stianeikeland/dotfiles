@@ -4,6 +4,7 @@ alias ls="ls -hFG"
 alias ip="dig +short myip.opendns.com @resolver1.opendns.com"
 alias localip="ipconfig getifaddr en1"
 alias ips="ifconfig -a | perl -nle'/(\d+\.\d+\.\d+\.\d+)/ && print $1'"
+alias ipv6="curl -6 \"http://ipv6.test-ipv6.com/ip/?callback=?\" -s  | cut -d \\\" -f 4"
 
 # Enhanced WHOIS lookups
 alias whois="whois -h whois-servers.net"

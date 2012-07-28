@@ -7,4 +7,4 @@ rsync -av bash/bash.grc ~/.bash.grc
 mkdir -p ~/bin/synced/
 rsync -av bin/* ~/bin/synced/
 
-rsync -av .gitconfig .hgrc .screenrc .vimrc ~
+rsync -av .gitconfig .hgrc .screenrc .vimrc .zshrc ~
