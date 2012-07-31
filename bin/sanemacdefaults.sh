@@ -79,7 +79,10 @@ defaults write com.apple.dock autohide -bool true
 
 # Bluetooth headset higher bitrate
 # defaults read com.apple.BluetoothAudioAgent
-defaults write com.apple.BluetoothAudioAgent "Apple Bitpool Min (editable)" 40
+defaults write com.apple.BluetoothAudioAgent "Apple Bitpool Min (editable)" -int 40
+
+# Disable “natural” (Lion-style) scrolling
+defaults write NSGlobalDomain com.apple.swipescrolldirection -bool false
 
 
 
