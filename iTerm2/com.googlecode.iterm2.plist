@@ -2391,6 +2391,8 @@
 	<false/>
 	<key>NSFontPanelAttributes</key>
 	<string>1, 0</string>
+	<key>NSFontPanelPreviewHeight</key>
+	<real>79</real>
 	<key>NSNavLastRootDirectory</key>
 	<string>~/Dropbox/dotfiles/iTerm2</string>
 	<key>NSQuotedKeystrokeBinding</key>
@@ -8054,11 +8056,11 @@
 			<key>Ansi 0 Color</key>
 			<dict>
 				<key>Blue Component</key>
-				<real>0.0</real>
+				<real>0.1374611109495163</real>
 				<key>Green Component</key>
-				<real>0.0</real>
+				<real>0.1374611109495163</real>
 				<key>Red Component</key>
-				<real>0.0</real>
+				<real>0.1374611109495163</real>
 			</dict>
 			<key>Ansi 1 Color</key>
 			<dict>
@@ -8072,11 +8074,11 @@
 			<key>Ansi 10 Color</key>
 			<dict>
 				<key>Blue Component</key>
-				<real>0.21956604719161987</real>
+				<real>0.22565637528896332</real>
 				<key>Green Component</key>
-				<real>0.91119909286499023</real>
+				<real>0.89187997579574585</real>
 				<key>Red Component</key>
-				<real>0.56538259983062744</real>
+				<real>0.55876815319061279</real>
 			</dict>
 			<key>Ansi 11 Color</key>
 			<dict>
@@ -8126,11 +8128,11 @@
 			<key>Ansi 2 Color</key>
 			<dict>
 				<key>Blue Component</key>
-				<real>0.030891882255673409</real>
+				<real>0.035819299519062042</real>
 				<key>Green Component</key>
-				<real>0.83586680889129639</real>
+				<real>0.96919190883636475</real>
 				<key>Red Component</key>
-				<real>0.42352482676506042</real>
+				<real>0.49107924103736877</real>
 			</dict>
 			<key>Ansi 3 Color</key>
 			<dict>
@@ -8171,20 +8173,20 @@
 			<key>Ansi 7 Color</key>
 			<dict>
 				<key>Blue Component</key>
-				<real>0.91832226514816284</real>
+				<real>0.97456520795822144</real>
 				<key>Green Component</key>
-				<real>0.91832226514816284</real>
+				<real>0.97456520795822144</real>
 				<key>Red Component</key>
-				<real>0.91832226514816284</real>
+				<real>0.97456520795822144</real>
 			</dict>
 			<key>Ansi 8 Color</key>
 			<dict>
 				<key>Blue Component</key>
-				<real>0.23248416185379028</real>
+				<real>0.21061359345912933</real>
 				<key>Green Component</key>
-				<real>0.24425551295280457</real>
+				<real>0.22127757966518402</real>
 				<key>Red Component</key>
-				<real>0.23836983740329742</real>
+				<real>0.21594558656215668</real>
 			</dict>
 			<key>Ansi 9 Color</key>
 			<dict>
@@ -8274,18 +8276,18 @@
 			<key>Foreground Color</key>
 			<dict>
 				<key>Blue Component</key>
-				<real>0.94432270526885986</real>
+				<real>0.94464081525802612</real>
 				<key>Green Component</key>
-				<real>0.94432270526885986</real>
+				<real>0.94464081525802612</real>
 				<key>Red Component</key>
-				<real>0.94432270526885986</real>
+				<real>0.94464081525802612</real>
 			</dict>
 			<key>Guid</key>
 			<string>BDB25892-D98C-4A06-9030-279837F6AC16</string>
 			<key>Hide After Opening</key>
 			<false/>
 			<key>Horizontal Spacing</key>
-			<real>1.1000000238418579</real>
+			<real>0.89999997615814209</real>
 			<key>Idle Code</key>
 			<integer>0</integer>
 			<key>Initial Text</key>
@@ -8562,17 +8564,17 @@
 			<key>Log Directory</key>
 			<string></string>
 			<key>Minimum Contrast</key>
-			<real>0.28958332538604736</real>
+			<real>0.2798958420753479</real>
 			<key>Mouse Reporting</key>
 			<true/>
 			<key>Name</key>
 			<string>New default</string>
 			<key>Non Ascii Font</key>
-			<string>Menlo-RegularForPowerline 12</string>
+			<string>Menlo-RegularForPowerline 11</string>
 			<key>Non-ASCII Anti Aliased</key>
 			<true/>
 			<key>Normal Font</key>
-			<string>Menlo-RegularForPowerline 12</string>
+			<string>Menlo-RegularForPowerline 11</string>
 			<key>Option Key Sends</key>
 			<integer>0</integer>
 			<key>Prompt Before Closing 2</key>
@@ -8811,7 +8813,7 @@
 	<key>SUHasLaunchedBefore</key>
 	<true/>
 	<key>SULastCheckTime</key>
-	<date>2012-09-28T19:18:53Z</date>
+	<date>2012-09-29T09:14:44Z</date>
 	<key>SavePasteHistory</key>
 	<false/>
 	<key>ShowBookmarkName</key>
