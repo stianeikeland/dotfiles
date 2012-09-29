@@ -5,7 +5,13 @@ ZSH=$HOME/.oh-my-zsh
 # Look in ~/.oh-my-zsh/themes/
 # Optionally, if you set this to "random", it'll load a random theme each
 # time that oh-my-zsh is loaded.
-ZSH_THEME="afowler"
+#ZSH_THEME="afowler"
+ZSH_THEME="agnoster"
+#ZSH_THEME="powerline"
+
+#DEFAULT_USER="se"
+
+SHELL="/usr/local/bin/zsh"
 
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
