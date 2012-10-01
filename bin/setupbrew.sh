@@ -4,4 +4,5 @@
 
 brew update
 brew install ack axel bash bash-completion ddrescue gist git legit mercurial lftp grc mtr multimarkdown netcat ngrep nmap node p7zip rename pv ssh-copy-id unrar di
+brew install zsh mobile-shell most aria2 git-extras rdate
 brew install --HEAD vcprompt
