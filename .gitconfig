@@ -14,6 +14,8 @@
 	s = status -s
 	# Clone a repository including all submodules
 	c = clone --recursive
+	# Diff
+	d = diff
 	
 	# Legit stuff (from brew):
 	
@@ -47,3 +49,6 @@
 [merge]
 	# Include summaries of merged commits in newly created merge commit messages
 	log = true
+
+[core]
+	autocrlf = false

@@ -57,3 +57,6 @@ export LC_CTYPE="UTF-8"
 export EDITOR="mate_wait"
 export SVN_EDITOR="mate -w"
 export GIT_EDITOR="mate -w"
+
+[[ -s "$HOME/.rvm/scripts/rvm" ]] && . "$HOME/.rvm/scripts/rvm"
+
