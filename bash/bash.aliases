@@ -34,7 +34,7 @@ alias nano='nano -w';
 alias sudo='sudo '
 
 # Get OS X Software Updates, update Homebrew itself, and upgrade installed Homebrew packages
-alias update='sudo softwareupdate -i -a; brew update; brew upgrade'
+alias update='sudo softwareupdate -i -a; brew update; brew upgrade; upgrade_oh_my_zsh'
 
 # View HTTP traffic
 alias sniffhttp="sudo ngrep -d 'en1' -t '^(GET|POST) ' 'tcp and port 80'"
