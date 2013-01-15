@@ -52,3 +52,5 @@
 
 [core]
 	autocrlf = false
+[push]
+	default = upstream
