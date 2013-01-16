@@ -38,7 +38,7 @@ DISABLE_AUTO_UPDATE="true"
 
 fpath=(/usr/local/share/zsh-completions $fpath)
 
-plugins=(git textmate heroku brew osx npm github mercurial zsh-syntax-highlighting)
+plugins=(git textmate heroku brew osx npm github mercurial zsh-syntax-highlighting extract)
 
 ZSH_HIGHLIGHT_HIGHLIGHTERS=(main brackets pattern cursor)
 ZSH_HIGHLIGHT_PATTERNS+=('rm -rf *' 'fg=white,bold,bg=red')
