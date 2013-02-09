@@ -49,7 +49,7 @@ export HISTFILESIZE=16384;
 export HISTCONTROL=ignoredups;
 
 
-export PATH="/usr/local/bin:$PATH:/opt/local/bin:~/bin:~/bin/ec2/bin:~/bin/gsutil:~/bin/synced:/usr/local/cuda/bin:/usr/local/sbin"
+export PATH="/usr/local/bin:$PATH:/opt/local/bin:~/bin:~/bin/ec2/bin:~/bin/gsutil:~/bin/synced:/usr/local/cuda/bin:/usr/local/sbin:/usr/local/share/npm/bin"
 
 export DYLD_LIBRARY_PATH=/usr/local/cuda/lib:$DYLD_LIBRARY_PATH
 
