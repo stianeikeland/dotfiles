@@ -1,10 +1,14 @@
 #!/bin/bash
 
-rsync -av bash/bashrc ~/.bashrc
-rsync -av bash/bash.aliases ~/.bash.aliases
-rsync -av bash/bash.grc ~/.bash.grc
+if [ "$1" = "dry" ]; then
+	OPTS="--dry-run"
+fi
+
+rsync -av $OPTS bash/bashrc ~/.bashrc
+rsync -av $OPTS bash/bash.aliases ~/.bash.aliases
+rsync -av $OPTS bash/bash.grc ~/.bash.grc
 
 mkdir -p ~/bin/synced/
-rsync -av bin/* ~/bin/synced/
+rsync -av $OPTS bin/* ~/bin/synced/
 
-rsync -av .gitconfig .hgrc .screenrc .vimrc .zshrc ~
+rsync -av $OPTS .gitconfig .hgrc .screenrc .vimrc .zshrc ~
