@@ -68,9 +68,9 @@ fi
 export PYTHONPATH="/usr/local/lib/python2.7/site-packages:$PYTHONPATH"
 
 # ln -s /usr/bin/mate mate_wait
-export EDITOR="mate_wait"
-export SVN_EDITOR="mate -w"
-export GIT_EDITOR="mate -w"
+export EDITOR="subl --wait"
+export SVN_EDITOR="subl --wait"
+export GIT_EDITOR="subl --wait"
 
 if [ -f ~/.rvm/scripts/rvm ]; then
 	. ~/.rvm/scripts/rvm
