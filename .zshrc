@@ -54,9 +54,9 @@ alias ls="gls -F --color=auto"
 
 export LC_CTYPE="UTF-8"
 
-export EDITOR="mate_wait"
-export SVN_EDITOR="mate -w"
-export GIT_EDITOR="mate -w"
+export EDITOR="subl --wait"
+export SVN_EDITOR="subl --wait"
+export GIT_EDITOR="subl --wait"
 
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && . "$HOME/.rvm/scripts/rvm"
 
