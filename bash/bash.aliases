@@ -94,3 +94,6 @@ function countdown() {
 }
 
 alias stopwatch="echo \"Ctrl-D to stop..\" ; time read"
+
+alias sshik="ssh -o UserKnownHostsFile=/dev/null -o StrictHostKeyChecking=no"
+
