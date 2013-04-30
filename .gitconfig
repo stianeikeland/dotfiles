@@ -53,5 +53,6 @@
 
 [core]
 	autocrlf = false
+	editor = subl -n -w
 [push]
 	default = upstream
