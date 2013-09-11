@@ -52,11 +52,13 @@ source ~/.bash.aliases
 
 alias ls="gls -F --color=auto"
 
-export LC_CTYPE="UTF-8"
+export LC_CTYPE="en_US.UTF-8"
 
 export EDITOR="subl --wait"
 export SVN_EDITOR="subl --wait"
 export GIT_EDITOR="subl --wait"
+
+export GOPATH="${HOME}/.go"
 
 #[[ -s "$HOME/.rvm/scripts/rvm" ]] && . "$HOME/.rvm/scripts/rvm"
 
