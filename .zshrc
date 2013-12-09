@@ -46,17 +46,21 @@ ZSH_HIGHLIGHT_PATTERNS+=('rm -rf *' 'fg=white,bold,bg=red')
 source $ZSH/oh-my-zsh.sh
 
 # Customize to your needs...
-export PATH=/Users/se/.rvm/gems/ruby-1.9.3-p194/bin:/Users/se/.rvm/gems/ruby-1.9.3-p194@global/bin:/Users/se/.rvm/rubies/ruby-1.9.3-p194/bin:/Users/se/.rvm/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/opt/local/bin:~/bin:~/bin/ec2/bin:~/bin/gsutil:~/bin/synced:/usr/local/cuda/bin:/usr/local/sbin:/Users/se/.rvm/bin
+export PATH=/Users/se/.rvm/gems/ruby-1.9.3-p194/bin:/Users/se/.rvm/gems/ruby-1.9.3-p194@global/bin:/Users/se/.rvm/rubies/ruby-1.9.3-p194/bin:/Users/se/.rvm/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/opt/local/bin:~/bin:~/bin/ec2/bin:~/bin/gsutil:~/bin/synced:/usr/local/cuda/bin:/usr/local/sbin:/Users/se/.rvm/bin:/usr/local/share/npm/bin/
 
 source ~/.bash.aliases
 
 alias ls="gls -F --color=auto"
 
-export LC_CTYPE="UTF-8"
+export LC_CTYPE="en_US.UTF-8"
 
 export EDITOR="subl --wait"
 export SVN_EDITOR="subl --wait"
 export GIT_EDITOR="subl --wait"
 
-[[ -s "$HOME/.rvm/scripts/rvm" ]] && . "$HOME/.rvm/scripts/rvm"
+export GOPATH="${HOME}/.go"
 
+#[[ -s "$HOME/.rvm/scripts/rvm" ]] && . "$HOME/.rvm/scripts/rvm"
+
+#icalbuddy -sc eventsToday
+#echo

@@ -17,9 +17,20 @@
 	c = clone --recursive
 	# Diff
 	d = diff
-	
+
+	noff = merge --no-ff
+	word-diff = diff --word-diff
+
+	# Merging shortcuts:
+	ours   = "!f() { git checkout --ours $@ && git add $@; }; f"
+	theirs = "!f() { git checkout --theirs $@ && git add $@; }; f"
+
+	# Forget that a file was changed (avoid checking in config / passwords /etc)
+	assume = update-index --assume-unchanged
+	unassume = update-index --no-assume-unchanged
+	assumed = "!git ls-files -v | grep ^h | cut -c 3-"
+
 	# Legit stuff (from brew):
-	
 	switch = !legit switch \"$@\"
 	branches = !legit branches
 	sprout = !legit sprout \"$@\"
@@ -28,11 +39,12 @@
 	sync = !legit sync \"$@\"
 	publish = !legit publish \"$@\"
 	graft = !legit graft \"$@\"
-	
+
 [color]
 	branch = auto
 	diff = auto
 	status = auto
+	ui = auto
 [color "branch"]
 	current = yellow reverse
 	local = yellow
@@ -47,11 +59,15 @@
 	changed = green
 	untracked = cyan
 
+[diff]
+	patience = true
+
 [merge]
 	# Include summaries of merged commits in newly created merge commit messages
 	log = true
 
 [core]
 	autocrlf = false
+	editor = subl -n -w
 [push]
 	default = upstream
