@@ -87,6 +87,12 @@ defaults write NSGlobalDomain com.apple.swipescrolldirection -bool false
 # Allow selection of text in quicklook windows
 defaults write com.apple.finder QLEnableTextSelection -bool true
 
+# Settings for qlcolorcode quicklook plugin
+# https://github.com/n8gray/QLColorCode
+# https://github.com/sindresorhus/quick-look-plugins
+defaults write org.n8gray.QLColorCode hlTheme pablo
+defaults write org.n8gray.QLColorCode font Monaco
+
 # Kill affected applications
 for app in Safari Finder Dock Mail SystemUIServer; do killall "$app" >/dev/null 2>&1; done
 
