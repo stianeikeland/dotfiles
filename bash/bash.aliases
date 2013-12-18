@@ -28,6 +28,8 @@ alias hidefinder="defaults write com.apple.Finder AppleShowAllFiles -bool false 
 alias hidedesktop="defaults write com.apple.finder CreateDesktop -bool false && killall Finder"
 alias showdesktop="defaults write com.apple.finder CreateDesktop -bool true && killall Finder"
 
+alias starship="play -n -c1 synth whitenoise band -n 100 20 band -n 50 20 gain +30 fade h 1 86400 1"
+
 alias nano='nano -w';
 
 # Enable aliases to be sudo’ed
