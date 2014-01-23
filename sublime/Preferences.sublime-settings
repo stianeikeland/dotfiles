@@ -1,0 +1,48 @@
+{
+	"caret_extra_bottom": 2,
+	"caret_extra_top": 2,
+	"caret_extra_width": 2,
+	"color_scheme": "Packages/User/base16-tomorrow.dark (SL).tmTheme",
+	"draw_white_space": "selection",
+	"ensure_newline_at_eof_on_save": true,
+	"file_exclude_patterns":
+	[
+		".DS_Store"
+	],
+	"find_selected_text": true,
+	"folder_exclude_patterns":
+	[
+		".svn",
+		".git",
+		".hg",
+		"CVS",
+		"_build",
+		"dist",
+		"build",
+		"site"
+	],
+	"font_face": "Menlo",
+	"font_options":
+	[
+		"subpixel_antialias"
+	],
+	"font_size": 14.0,
+	"highlight_line": true,
+	"highlight_modified_tabs": true,
+	"ignored_packages":
+	[
+		"Arduino-like IDE",
+		"Vintage"
+	],
+	"line_padding_bottom": 0,
+	"line_padding_top": 1,
+	"rulers":
+	[
+		80,
+		120
+	],
+	"scroll_past_end": true,
+	"tab_size": 4,
+	"theme": "Soda Dark 3.sublime-theme",
+	"trim_trailing_white_space_on_save": true
+}
