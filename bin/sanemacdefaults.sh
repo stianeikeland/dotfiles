@@ -1,6 +1,9 @@
 # Gathered from many different sources including mathias bynens
 # https://github.com/mathiasbynens/dotfiles
 
+# Save to disk (not to iCloud) by default
+defaults write NSGlobalDomain NSDocumentSaveNewDocumentsToCloud -bool false
+
 # Disable press-and-hold for keys in favor of key repeat
 defaults write -g ApplePressAndHoldEnabled -bool false
 
