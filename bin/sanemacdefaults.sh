@@ -1,6 +1,9 @@
 # Gathered from many different sources including mathias bynens
 # https://github.com/mathiasbynens/dotfiles
 
+# Finder: allow quitting via ⌘ + Q; doing so will also hide desktop icons
+defaults write com.apple.finder QuitMenuItem -bool true
+
 # Save to disk (not to iCloud) by default
 defaults write NSGlobalDomain NSDocumentSaveNewDocumentsToCloud -bool false
 
