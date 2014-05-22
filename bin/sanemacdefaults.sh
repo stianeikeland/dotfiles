@@ -101,8 +101,8 @@ defaults write com.apple.finder QLEnableTextSelection -bool true
 defaults write org.n8gray.QLColorCode hlTheme pablo
 defaults write org.n8gray.QLColorCode font Monaco
 
+# Disable expose animation
+defaults write com.apple.dock expose-animation-duration -float 0
+
 # Kill affected applications
 for app in Safari Finder Dock Mail SystemUIServer; do killall "$app" >/dev/null 2>&1; done
-
-
-
