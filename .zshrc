@@ -38,19 +38,22 @@ DISABLE_AUTO_UPDATE="true"
 
 fpath=(/usr/local/share/zsh-completions $fpath)
 
-plugins=(git textmate heroku brew osx npm github mercurial zsh-syntax-highlighting extract nyan emacs mosh vagrant z rsync)
+plugins=(git textmate heroku brew osx npm github mercurial zsh-syntax-highlighting extract nyan mosh vagrant z rsync)
 
 ZSH_HIGHLIGHT_HIGHLIGHTERS=(main brackets pattern cursor)
 ZSH_HIGHLIGHT_PATTERNS+=('rm -rf *' 'fg=white,bold,bg=red')
-
-# Customize to your needs...
-export PATH=/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/opt/local/bin:~/bin:~/bin/ec2/bin:~/bin/gsutil:~/bin/synced:/usr/local/cuda/bin:/usr/local/sbin:/Users/se/.rvm/bin:/usr/local/share/npm/bin/
 
 autoload -Uz history-beginning-search-menu
 zle -N history-beginning-search-menu
 bindkey '^X^X' history-beginning-search-menu
 
 source $ZSH/oh-my-zsh.sh
+
+# Customize to your needs...
+export PATH=/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/opt/local/bin:~/bin:~/bin/ec2/bin:~/bin/gsutil:~/bin/synced:/usr/local/cuda/bin:/usr/local/sbin:/Users/se/.rvm/bin:/usr/local/share/npm/bin/
+
+# Enable emacs plugin here, path issues..
+source ~/.oh-my-zsh/plugins/emacs/emacs.plugin.zsh
 
 source ~/.bash.aliases
 
