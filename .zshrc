@@ -38,7 +38,7 @@ DISABLE_AUTO_UPDATE="true"
 
 fpath=(/usr/local/share/zsh-completions $fpath)
 
-plugins=(git textmate heroku brew osx npm github mercurial zsh-syntax-highlighting extract)
+plugins=(git textmate heroku brew osx npm github mercurial zsh-syntax-highlighting extract nyan emacs)
 
 ZSH_HIGHLIGHT_HIGHLIGHTERS=(main brackets pattern cursor)
 ZSH_HIGHLIGHT_PATTERNS+=('rm -rf *' 'fg=white,bold,bg=red')
@@ -54,9 +54,9 @@ alias ls="gls -F --color=auto"
 
 export LC_CTYPE="en_US.UTF-8"
 
-export EDITOR="subl --wait"
-export SVN_EDITOR="subl --wait"
-export GIT_EDITOR="subl --wait"
+export EDITOR="emacsclient"
+export SVN_EDITOR="emacsclient"
+export GIT_EDITOR="emacsclient"
 
 export GOPATH="${HOME}/.go"
 
@@ -64,3 +64,14 @@ export GOPATH="${HOME}/.go"
 
 #icalbuddy -sc eventsToday
 #echo
+
+export PATH=/usr/texbin:"$PATH"
+export DOCKER_HOST=tcp://localhost:14243
+export JAVA_TOOL_OPTIONS='-Djava.awt.headless=true'
+
+ulimit -n 1024
+
+# Fix alt-direction arrows under os x
+bindkey -e
+bindkey '[C' forward-word
+bindkey '[D' backward-word
