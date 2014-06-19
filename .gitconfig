@@ -7,14 +7,23 @@
 	password = !security 2>&1 >/dev/null find-generic-password -gs github.password | ruby -e 'print $1 if STDIN.gets =~ /^password: \\\"(.*)\\\"$/'
 [alias]
 	co = checkout
+
 	l = log --graph --pretty=format':%C(yellow)%h%Cblue%d%Creset %s %C(white) %an, %ar%Creset'
 	ll = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
-	loll = log --graph --decorate --pretty=oneline --abbrev-commit
-	lol = !git --no-pager loll
-	lolal = log --graph --decorate --pretty=oneline --abbrev-commit --all
-	lola = !git --no-pager lolal
+
+	# log key
+	lk = log --graph --topo-order --abbrev-commit --date=short --decorate --all --boundary --pretty=format:'%Cgreen%ad %Cred%h%Creset -%C(yellow)%d%Creset %s %Cblue[%cn]%Creset'
+
+	# log with patch generation.
+	lp = log --patch
+
 	# Commit all changes
-	ca = commit -a
+	ca = commit --all
+	cm = commit -m
+	cam = commit -am
+	amend = commit --amend
+	ap = add --patch
+
 	# Status
 	s = status -s
 	# Clone a repository including all submodules
@@ -43,7 +52,7 @@
 	sync = !legit sync \"$@\"
 	publish = !legit publish \"$@\"
 	graft = !legit graft \"$@\"
-	
+
 	# Pull
 	pl   = pull
 	plo  = pull --rebase origin
@@ -52,7 +61,8 @@
 	plu  = pull --rebase upstream
 	plum = pull --rebase upstream master
 	plug = pull --rebase upstream gh-pages
-	
+	pr = pull --rebase
+
 	# Push
 	ps   = push
 	pso  = push origin
@@ -61,9 +71,19 @@
 	psu  = push upstream
 	psum = push upstream master
 	psug = push upstream gh-pages
-	
+
+	what = whatchanged
+
 	# Sync
 	sync = plu && pso
+
+	# Search commits with string
+	searchcommits = "!f() { query=\"$1\"; shift; git log -S\"$query\" \"$@\"; }; f \"$@\""
+
+	# This produces output that can be displayed using dotty, for example:
+	#   $ git graphviz HEAD~100..HEAD~60 | dotty /dev/stdin
+	#   $ git graphviz --first-parent master | dotty /dev/stdin
+	graphviz = "!f() { echo 'digraph git {' ; git log --pretty='format:  %h -> { %p }' \"$@\" | sed 's/[0-9a-f][0-9a-f]*/\"&\"/g' ; echo '}'; }; f"
 
 [color]
 	branch = auto
@@ -90,9 +110,19 @@
 [merge]
 	# Include summaries of merged commits in newly created merge commit messages
 	log = true
+	tool = p4merge
 
 [core]
 	autocrlf = false
-	editor = subl -n -w
+	editor = emacsclient
+	pager = most
 [push]
-	default = upstream
+	default = simple
+[mergetool]
+	prompt = false
+	keepBackup = false
+[mergetool "p4merge"]
+	path = /Users/se/Applications/p4merge.app/Contents/Resources/launchp4merge
+[filter "media"]
+	clean = git-media-clean %f
+	smudge = git-media-smudge %f
